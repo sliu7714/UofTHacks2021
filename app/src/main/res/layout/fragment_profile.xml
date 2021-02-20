@@ -1,24 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.ProfileFragment">
 
+    <ImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="100dp"
+        android:scaleX="3.5"
+        android:scaleY="3.5"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="276dp"
+        tools:src="@mipmap/ic_profile_pic1" />
+
     <TextView
-        android:id="@+id/text_profile"
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="30sp"
+        android:layout_toRightOf="@id/profile_picture"
+        android:text="Susan Miller"
+        android:textSize="80sp"
+        tools:layout_editor_absoluteX="581dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <TextView
+        android:id="@+id/tags_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:text="profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_below="@id/profile_picture"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="120dp"
+        android:text="My Interests:"
+        android:textSize="50sp" />
+
+    <ScrollView
+        android:id="@+id/tags_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/profile_picture"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginRight="200dp"
+        android:layout_marginBottom="100dp"
+        tools:layout_editor_absoluteX="543dp"
+        tools:layout_editor_absoluteY="603dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/tag1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Painting"
+                android:textSize="45sp"
+                android:visibility="visible"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Mystery Novels"
+                android:textSize="45sp"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Gardening"
+                android:textSize="45sp"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Soccer"
+                android:textSize="45sp"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Art"
+                android:textSize="45sp"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Hiking"
+                android:textSize="45sp"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Knitting"
+                android:textSize="45sp"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingBottom="20dp"
+                android:text="Cooking"
+                android:textSize="45sp"
+                tools:layout_marginLeft="30dp"
+                tools:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <Button
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="220dp"
+        android:layout_toRightOf="@id/profile_picture"
+        android:text="Edit profile"
+        android:textSize="45sp" />
+</RelativeLayout>
