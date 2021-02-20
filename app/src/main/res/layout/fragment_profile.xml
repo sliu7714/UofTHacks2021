@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".fragments.ProfileFragment">
 
     <TextView
         android:id="@+id/text_profile"
@@ -16,6 +16,7 @@
         android:textAlignment="center"
         android:gravity="center"
         android:textSize="20sp"
+        android:text="profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
