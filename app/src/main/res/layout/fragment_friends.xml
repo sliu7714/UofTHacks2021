@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,23 +7,219 @@
     tools:context=".fragments.FriendsFragment">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/friends_title_tc"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:text="friends"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginStart="420dp"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="10dp"
+        android:text="Friends"
+        android:textSize="80sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ImageView
+        android:id="@+id/friends_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/friends_title_tc"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:src="@drawable/friends_icon_3" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="475dp"
-        tools:layout_editor_absoluteY="580dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="100dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginRight="150dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                tools:layout_marginLeft="150dp">
+
+                <ImageView
+                    android:id="@+id/friend_pic1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:src="@drawable/profile_pic3"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <TextView
+                    android:id="@+id/friend_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@id/friend_pic1"
+                    android:text="Jenny Smith"
+                    android:textSize="50sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_profile_btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/friend_name1"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/friend_pic1"
+                    android:background="@color/teal_200"
+                    android:padding="12dp"
+                    android:text="View profile"
+                    android:textColor="@color/white"
+                    tools:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/call_btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="600dp"
+                    android:layout_marginLeft="600dp"
+                    android:layout_marginTop="70dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="Call"
+                    android:textSize="30sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                tools:layout_marginLeft="150dp">
+
+                <ImageView
+                    android:id="@+id/friend_pic2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:src="@drawable/profile_pic4"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <TextView
+                    android:id="@+id/friend_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@id/friend_pic2"
+                    android:text="Alice Kim"
+                    android:textSize="50sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_profile_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/friend_name2"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/friend_pic2"
+                    android:background="@color/teal_200"
+                    android:padding="12dp"
+                    android:text="View profile"
+                    android:textColor="@color/white"
+                    tools:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/call_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="600dp"
+                    android:layout_marginLeft="600dp"
+                    android:layout_marginTop="70dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="Call"
+                    android:textSize="30sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                tools:layout_marginLeft="150dp">
+
+                <ImageView
+                    android:id="@+id/friend_pic3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:src="@drawable/profile_pic5"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <TextView
+                    android:id="@+id/friend_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@id/friend_pic3"
+                    android:text="Steve Williams"
+                    android:textSize="50sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view_profile_btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/friend_name3"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/friend_pic3"
+                    android:background="@color/teal_200"
+                    android:padding="12dp"
+                    android:text="View profile"
+                    android:textColor="@color/white"
+                    tools:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/call_btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="600dp"
+                    android:layout_marginLeft="600dp"
+                    android:layout_marginTop="70dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="Call"
+                    android:textSize="30sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

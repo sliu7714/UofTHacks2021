@@ -12,20 +12,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
         android:layout_marginLeft="300dp"
-        android:layout_marginTop="100dp"
-        android:scaleX="3.5"
-        android:scaleY="3.5"
+        android:layout_marginTop="80dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:src="@drawable/profile_pic2"
         tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="276dp"
-        tools:src="@mipmap/ic_profile_pic1" />
+        tools:layout_editor_absoluteY="276dp" />
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="30sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50sp"
         android:layout_toRightOf="@id/profile_picture"
         android:text="Susan Miller"
         android:textSize="80sp"
@@ -36,12 +36,23 @@
         android:id="@+id/tags_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/profile_picture"
+        android:layout_below="@id/edit_profile_btn"
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="45dp"
         android:text="My Interests:"
-        android:textSize="50sp" />
+        android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/edit_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_toRightOf="@id/profile_picture"
+        android:text="Edit profile"
+        android:textSize="45sp" />
 
     <ScrollView
         android:id="@+id/tags_scroll_view"
@@ -50,7 +61,7 @@
         android:layout_below="@id/profile_picture"
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="200dp"
         android:layout_marginRight="200dp"
         android:layout_marginBottom="100dp"
@@ -150,15 +161,4 @@
     </ScrollView>
 
 
-
-    <Button
-        android:id="@+id/edit_profile_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/user_name"
-        android:layout_marginStart="220dp"
-        android:layout_marginLeft="220dp"
-        android:layout_toRightOf="@id/profile_picture"
-        android:text="Edit profile"
-        android:textSize="45sp" />
 </RelativeLayout>
