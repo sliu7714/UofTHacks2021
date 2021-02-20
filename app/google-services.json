@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "206081238981",
+    "project_id": "uofthacks-2021",
+    "storage_bucket": "uofthacks-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206081238981:android:93a7027d7f89aac2270dac",
+        "android_client_info": {
+          "package_name": "com.example.uofthacks2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206081238981-9ifl3fccit7aqj22793coq6e0q93f5sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAixDRSccKg7t4ZacLa4GZmVEevdMXNyME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206081238981-9ifl3fccit7aqj22793coq6e0q93f5sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
