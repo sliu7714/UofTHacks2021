@@ -33,6 +33,9 @@ public class HomeFragment extends Fragment {
     TextView endcallText;
     LinearLayout connectingScreen;
     Button connect_btn;
+    ImageButton help_btn;
+    Button close_help_btn;
+    LinearLayout helpView;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -72,14 +75,37 @@ public class HomeFragment extends Fragment {
         endcallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                connect_btn.setVisibility(View.INVISIBLE);
+
                 videoView.setVisibility(View.INVISIBLE);
                 endcallButton.setVisibility(View.INVISIBLE);
                 endcallText.setVisibility(View.INVISIBLE);
                 connectingScreen.setVisibility(View.INVISIBLE);
+                connect_btn.setVisibility(View.VISIBLE);
                 videoView.pause();
             }
         });
+
+        helpView = (LinearLayout)root.findViewById(R.id.help_view_home);
+
+        help_btn = (ImageButton) root.findViewById(R.id.help_btn_home);
+        help_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                connect_btn.setVisibility(View.INVISIBLE);
+                helpView.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+        close_help_btn = (Button) root.findViewById(R.id.close_help_btn);
+        close_help_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                connect_btn.setVisibility(View.VISIBLE);
+                helpView.setVisibility(View.INVISIBLE);
+            }
+        });
+
 
 
 

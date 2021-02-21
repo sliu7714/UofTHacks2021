@@ -117,10 +117,11 @@
                 android:id="@+id/additional_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
                 android:paddingBottom="0dp"
                 android:text="Additional Interests..."
+                android:textColor="@color/dark_grey"
                 android:textSize="25sp"
                 tools:layout_marginLeft="0dp"
                 tools:layout_marginTop="0dp" />
@@ -144,7 +145,7 @@
         tools:layout_editor_absoluteY="95dp" />
 
     <ImageButton
-        android:id="@+id/help_btn"
+        android:id="@+id/help_btn_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="350dp"
@@ -156,7 +157,7 @@
         android:src="@drawable/help_icon" />
 
     <TextView
-        android:id="@+id/help_tv"
+        android:id="@+id/help_tv_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="350dp"
@@ -222,10 +223,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hang up"
-        android:layout_below="@+id/end_call_btn"
-        android:gravity="center"
-        android:visibility="invisible"
-        android:textAlignment="center"
+        android:layout_toRightOf="@id/end_call_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="510dp"
         android:textColor="@color/white"
         android:textSize="50sp" />
 
@@ -233,12 +233,190 @@
         android:id="@+id/end_call_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="450dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="500dp"
         android:background="@android:color/transparent"
         android:src="@drawable/end_call_icon"
         android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/help_view_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="100dp"
+        android:paddingTop="0dp"
+        android:paddingRight="100dp"
+        android:paddingBottom="100dp"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/close_help_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginEnd="200dp"
+            android:layout_marginRight="200dp"
+            android:layout_marginBottom="10dp"
+            android:text="Close help page"
+            android:textSize="40sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How do I start a call with others?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="First select the interests that you would like to talk about"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Press the orange 'CONNECT' button to connected with another person with the same interests  "
+                    android:textSize="30sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How do I choose what I want to talk about?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scroll on the list of interests to customise what you want to talk about."
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Interests are recommended to you based on your profile. Click the orange button on the bottom to see more interests to add "
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Of course the interests are just suggestions and we encourage you to talk about anything!"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How to report inappropriate behavior?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" If have experienced inappropiate behaviour from another user please click the button below to report the behaviour and we will help you deal with your issue."
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginRight="300dp"
+                    android:text="Report Inappropriate behaviour"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How do I navigate the different pages?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Click on the icons on the bottom of the screen to navigate to another screen."
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How do I look at / edit my profile?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Click on the Profile button on the bottom bar to navigate to the profile page. \n There will be more instructions if you click the help question mark icon in the top right"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How do I see my friends?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Click on the Friends button on the bottom bar to navigate to the friends page. \n There will be more instructions if you click the help question mark icon in the top right"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What if no one else is available?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="If no one else who wants to talk about the same interests is available at this time,  You will get some recommendations for users to connect with. Message them or request to be friends! \n"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I have a technical issue/ more questions?"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Please press the button below to report your issue and we will help connect you with someone who can help you."
+                    android:textSize="30sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginRight="300dp"
+                    android:text="Contact us"
+                    android:textSize="25sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

@@ -6,38 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".fragments.FriendsFragment">
 
-    <VideoView
-        android:id="@+id/video_view2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:visibility="invisible" />
-
-    <TextView
-        android:id="@+id/hangup_tv2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/end_call_btn"
-        android:gravity="center"
-        android:text="Hang up"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        android:visibility="invisible" />
-
     <ImageButton
-        android:id="@+id/end_call_btn2"
+        android:id="@+id/help_btn_friends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="450dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="450dp"
+        android:layout_marginLeft="450dp"
+        android:layout_toRightOf="@id/friends_title_tc"
         android:background="@android:color/transparent"
-        android:src="@drawable/end_call_icon"
-        android:visibility="invisible" />
+        android:scaleX=".7"
+        android:scaleY=".7"
+        android:src="@drawable/help_icon" />
+
+    <TextView
+        android:id="@+id/help_tv_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="450dp"
+        android:layout_marginLeft="450dp"
+        android:layout_marginTop="75dp"
+        android:layout_toRightOf="@id/friends_title_tc"
+        android:text="Help"
+        android:textSize="45sp" />
 
     <TextView
         android:id="@+id/friends_title_tc"
@@ -81,6 +71,17 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Add more Friends"
+                android:textSize="30sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -137,6 +138,7 @@
                     android:paddingBottom="20dp"
                     android:text="Call"
                     android:textSize="30sp" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -254,5 +256,56 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/connecting_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_700"
+        android:orientation="vertical"
+        android:visibility="invisible"/>
+
+    <VideoView
+        android:id="@+id/video_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/hangup_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="510dp"
+        android:layout_toRightOf="@id/end_call_btn2"
+        android:text="Hang up"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/end_call_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="500dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/end_call_icon"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/help_view_friends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="100dp"
+        android:visibility="invisible" />
 
 </RelativeLayout>
