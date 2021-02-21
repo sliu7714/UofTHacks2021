@@ -1,5 +1,6 @@
 package com.example.uofthacks2021.fragments;
 
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -37,6 +38,10 @@ public class HomeFragment extends Fragment {
     Button close_help_btn;
     LinearLayout helpView;
 
+    View friend_pic;
+    Button add_friend_btn, exit_vid_btn;
+    TextView friend_name;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,16 +58,27 @@ public class HomeFragment extends Fragment {
 
         connectingScreen = (LinearLayout)root.findViewById(R.id.connecting_view) ;
 
+        friend_name = root.findViewById(R.id.user_name5);
+        friend_pic =  root.findViewById(R.id.profile_picture5);
+        exit_vid_btn  = root.findViewById(R.id.exit_vid_btn);
+        add_friend_btn = root.findViewById(R.id.friend_btn4);
+
+
 
         connect_btn = root.findViewById(R.id.connect_btn);
         connect_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                connectingScreen.setVisibility(View.VISIBLE);
+                Toast.makeText(getContext(),"Connecting to call...",Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
-//                ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+                connectingScreen.setVisibility(View.VISIBLE);
+                Toast.makeText(getContext(), "You both like: Mystery Novels, Art, Cooking", Toast.LENGTH_LONG).show();
 //
-//                executorService.schedule(HomeFragment.this::ConnectCall, 2, TimeUnit.SECONDS);
                 connect_btn.setVisibility(View.INVISIBLE);
                 videoView.setVisibility(View.VISIBLE);
                 endcallButton.setVisibility(View.VISIBLE);
@@ -79,9 +95,33 @@ public class HomeFragment extends Fragment {
                 videoView.setVisibility(View.INVISIBLE);
                 endcallButton.setVisibility(View.INVISIBLE);
                 endcallText.setVisibility(View.INVISIBLE);
+                videoView.pause();
+            }
+        });
+        exit_vid_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
                 connectingScreen.setVisibility(View.INVISIBLE);
                 connect_btn.setVisibility(View.VISIBLE);
-                videoView.pause();
+
+            }
+        });
+
+        final boolean[] is_friend = {false};
+        add_friend_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(is_friend[0]){
+                    add_friend_btn.setText("Add friend");
+                    Toast.makeText(getContext(), "You removed Jenny Smith as a friend", Toast.LENGTH_SHORT).show();
+                    is_friend[0] = false;
+                }
+                else {
+                    add_friend_btn.setText("Remove friend");
+                    Toast.makeText(getContext(), "You added Jenny Smith as a friend", Toast.LENGTH_SHORT).show();
+                    is_friend[0] = true;
+                }
             }
         });
 
@@ -97,7 +137,7 @@ public class HomeFragment extends Fragment {
         });
 
 
-        close_help_btn = (Button) root.findViewById(R.id.close_help_btn);
+        close_help_btn =  root.findViewById(R.id.close_help_btn);
         close_help_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +145,6 @@ public class HomeFragment extends Fragment {
                 helpView.setVisibility(View.INVISIBLE);
             }
         });
-
 
 
 

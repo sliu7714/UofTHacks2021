@@ -160,12 +160,12 @@
         android:id="@+id/help_tv_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginStart="365dp"
+        android:layout_marginLeft="365dp"
+        android:layout_marginTop="80dp"
         android:layout_toRightOf="@id/talk_title_tv"
         android:text="Help"
-        android:textSize="45sp" />
+        android:textSize="30sp" />
 
     <LinearLayout
         android:id="@+id/connecting_view"
@@ -175,37 +175,105 @@
         android:orientation="vertical"
         android:visibility="invisible">
 
-        <TextView
-            android:id="@+id/Connecting_msg_tv1"
+        <ImageView
+            android:id="@+id/profile_picture5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:text="Connecting with..."
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="60dp" />
+            android:layout_marginTop="60dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/profile_pic3"
+            tools:layout_editor_absoluteX="311dp"
+            tools:layout_editor_absoluteY="276dp" />
 
         <TextView
-            android:id="@+id/Connecting_msg_tv2"
+            android:id="@+id/user_name5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp"
             android:text="Jenny Smith"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="80dp" />
+            android:textSize="80sp" />
 
-        <TextView
-            android:id="@+id/Connecting_msg_tv3"
+        <Button
+            android:id="@+id/friend_btn4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="You both like:\n Mystery Novels, Art, Cooking"
-            android:textAlignment="center"
-            android:textColor="@color/orange"
-            android:textSize="60dp" />
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginEnd="300dp"
+            android:layout_marginRight="300dp"
+            android:text="Add Friend"
+            android:textSize="45sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exit_vid_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="300dp"
+            android:layout_marginRight="300dp"
+            android:background="@color/light_blue"
+            android:text="Exit"
+            android:textColor="@color/dark_grey"
+            android:textSize="45sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="400dp"
+            android:layout_marginLeft="400dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="400dp"
+            android:layout_marginRight="400dp"
+            android:text="Report Inappropriate behaviour"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/connecting_message_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/Connecting_msg_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Connecting with..."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="60dp" />
+
+            <TextView
+                android:id="@+id/Connecting_msg_tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="Jenny Smith"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="80dp" />
+
+            <TextView
+                android:id="@+id/Connecting_msg_tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="You both like:\n Mystery Novels, Art, Cooking"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="60dp" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <VideoView

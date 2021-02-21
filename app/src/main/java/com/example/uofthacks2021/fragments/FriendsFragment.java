@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -47,6 +48,12 @@ public class FriendsFragment extends Fragment {
         call_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getContext(),"Connecting to call...",Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 connectingScreen.setVisibility(View.VISIBLE);
                 call_btn1.setVisibility(View.INVISIBLE);
                 videoView.setVisibility(View.VISIBLE);
@@ -87,10 +94,12 @@ public class FriendsFragment extends Fragment {
             public void onClick(View v) {
                 if(is_friend[0]){
                     friend_btn.setText("Add friend");
+                    Toast.makeText(getContext(), "You removed Jenny Smith as a friend", Toast.LENGTH_SHORT).show();
                     is_friend[0] = false;
                 }
                 else {
                     friend_btn.setText("Remove friend");
+                    Toast.makeText(getContext(), "You added Jenny Smith as a friend", Toast.LENGTH_SHORT).show();
                     is_friend[0] = true;
                 }
             }

@@ -10,8 +10,8 @@
         android:id="@+id/help_btn_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
         android:layout_toRightOf="@id/user_name"
         android:background="@android:color/transparent"
         android:scaleX=".7"
@@ -22,12 +22,12 @@
         android:id="@+id/help_tv_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="80dp"
         android:layout_toRightOf="@id/user_name"
         android:text="Help"
-        android:textSize="45sp" />
+        android:textSize="35sp" />
 
     <ImageView
         android:id="@+id/profile_picture"

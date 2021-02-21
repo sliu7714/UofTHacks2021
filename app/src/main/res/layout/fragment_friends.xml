@@ -10,8 +10,8 @@
         android:id="@+id/help_btn_friends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="450dp"
-        android:layout_marginLeft="450dp"
+        android:layout_marginStart="455dp"
+        android:layout_marginLeft="455dp"
         android:layout_toRightOf="@id/friends_title_tc"
         android:background="@android:color/transparent"
         android:scaleX=".7"
@@ -22,12 +22,12 @@
         android:id="@+id/help_tv_friends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="450dp"
-        android:layout_marginLeft="450dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginStart="470dp"
+        android:layout_marginLeft="470dp"
+        android:layout_marginTop="80dp"
         android:layout_toRightOf="@id/friends_title_tc"
         android:text="Help"
-        android:textSize="45sp" />
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/friends_title_tc"
@@ -73,7 +73,6 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <Button
-                android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
@@ -81,6 +80,19 @@
                 android:layout_marginEnd="50dp"
                 android:layout_marginRight="50dp"
                 android:text="Add more Friends"
+                android:textSize="30sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
+                android:layout_marginLeft="50sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/light_blue"
+                android:text="See call history"
+                android:textColor="@color/dark_grey"
                 android:textSize="30sp" />
 
             <RelativeLayout
