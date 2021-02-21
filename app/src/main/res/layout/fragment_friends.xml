@@ -299,6 +299,75 @@
         android:src="@drawable/end_call_icon"
         android:visibility="invisible" />
 
+    <RelativeLayout
+        android:id="@+id/friend_profile_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/profile_picture2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="80dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/profile_pic3"
+            tools:layout_editor_absoluteX="311dp"
+            tools:layout_editor_absoluteY="276dp" />
+
+        <TextView
+            android:id="@+id/user_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50sp"
+            android:layout_toRightOf="@id/profile_picture2"
+            android:text="Jenny Smith"
+            android:textSize="80sp"
+            tools:layout_editor_absoluteX="581dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <TextView
+            android:id="@+id/tags_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/friend_btn"
+            android:layout_marginStart="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="45dp"
+            android:text="Jenny's Interests:"
+            android:textColor="@color/teal_700"
+            android:textSize="60sp" />
+
+        <Button
+            android:id="@+id/friend_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name2"
+            android:layout_marginStart="130dp"
+            android:layout_marginLeft="130dp"
+            android:layout_toRightOf="@id/profile_picture2"
+            android:text="Remove Friend"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/interests_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tags_title2"
+            android:layout_marginStart="250dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginEnd="250dp"
+            android:layout_marginRight="250dp"
+            android:text="Mystery Novels, Travel, Art, Photography, Cooking, Antiques"
+            android:textSize="50sp" />
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/help_view_friends"
         android:layout_width="match_parent"
@@ -306,6 +375,8 @@
         android:background="@color/white"
         android:orientation="vertical"
         android:padding="100dp"
-        android:visibility="invisible" />
+        android:visibility="invisible" >
+
+    </LinearLayout>
 
 </RelativeLayout>

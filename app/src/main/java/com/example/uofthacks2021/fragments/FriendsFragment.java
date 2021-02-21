@@ -5,17 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.uofthacks2021.R;
 
@@ -26,6 +23,10 @@ public class FriendsFragment extends Fragment {
     TextView endcallText;
     Button call_btn1;
     LinearLayout connectingScreen;
+
+    RelativeLayout friendView;
+    Button see_friend_profile, friend_btn;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -66,6 +67,32 @@ public class FriendsFragment extends Fragment {
                 endcallButton.setVisibility(View.INVISIBLE);
                 endcallText.setVisibility(View.INVISIBLE);
                 videoView.pause();
+            }
+        });
+
+        friendView = (RelativeLayout)root.findViewById(R.id.friend_profile_view);
+
+        see_friend_profile = (Button)root.findViewById(R.id.view_profile_btn1);
+        see_friend_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                friendView.setVisibility(View.VISIBLE);
+            }
+        });
+
+        friend_btn = (Button)root.findViewById(R.id.friend_btn);
+        final boolean[] is_friend = {true};
+        friend_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(is_friend[0]){
+                    friend_btn.setText("Add friend");
+                    is_friend[0] = false;
+                }
+                else {
+                    friend_btn.setText("Remove friend");
+                    is_friend[0] = true;
+                }
             }
         });
 

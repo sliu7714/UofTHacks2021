@@ -64,6 +64,7 @@
         android:layout_marginLeft="200dp"
         android:layout_marginTop="45dp"
         android:text="My Interests:"
+        android:textColor="@color/teal_700"
         android:textSize="60sp" />
 
     <Button
