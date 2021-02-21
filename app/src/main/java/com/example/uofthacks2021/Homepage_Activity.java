@@ -2,6 +2,7 @@ package com.example.uofthacks2021;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -54,6 +55,7 @@ public class Homepage_Activity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
 
 
 
@@ -164,6 +166,8 @@ public class Homepage_Activity extends AppCompatActivity {
 
 
     }
+
+
 
 
 

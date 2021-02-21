@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,19 +7,238 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
+    <Button
+        android:id="@+id/connect_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tags_scroll_view"
+        android:layout_marginStart="450dp"
+        android:layout_marginLeft="450dp"
+        android:layout_marginTop="10dp"
+        android:text="Connect"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="438dp"
+        tools:layout_editor_absoluteY="520dp" />
+
+    <ScrollView
+        android:id="@+id/tags_scroll_view"
+        android:layout_width="850dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/talk_title_tv"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="0dp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="138dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@color/light_blue"
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
+
+            <CheckBox
+                android:id="@+id/tag1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Painting"
+                android:textSize="45sp"
+                android:visibility="visible"
+                tools:layout_marginLeft="50dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Mystery Novels"
+                android:textSize="45sp"
+                tools:layout_marginLeft="50dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Gardening"
+                android:textSize="45sp"
+                tools:layout_marginLeft="50dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Soccer"
+                android:textSize="45sp"
+                tools:layout_marginLeft="50dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Art"
+                android:textSize="45sp"
+                tools:layout_marginLeft="50dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Hiking"
+                android:textSize="45sp"
+                tools:layout_marginLeft="50dp"
+                tools:layout_marginTop="10dp" />
+
+            <CheckBox
+                android:id="@+id/tag7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Connect to Volunteer"
+                android:textSize="45sp"
+                tools:layout_marginLeft="50dp"
+                tools:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/additional_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="0dp"
+                android:text="Additional Interests..."
+                android:textSize="25sp"
+                tools:layout_marginLeft="0dp"
+                tools:layout_marginTop="0dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/talk_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="50dp"
+        android:text="I want to talk about..."
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="386dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <ImageButton
+        android:id="@+id/help_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginLeft="350dp"
+        android:layout_toRightOf="@id/talk_title_tv"
+        android:background="@android:color/transparent"
+        android:scaleX=".7"
+        android:scaleY=".7"
+        android:src="@drawable/help_icon" />
+
+    <TextView
+        android:id="@+id/help_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="75dp"
+        android:layout_toRightOf="@id/talk_title_tv"
+        android:text="Help"
+        android:textSize="45sp" />
+
+    <LinearLayout
+        android:id="@+id/connecting_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_700"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/Connecting_msg_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Connecting with..."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="60dp" />
+
+        <TextView
+            android:id="@+id/Connecting_msg_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Jenny Smith"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="80dp" />
+
+        <TextView
+            android:id="@+id/Connecting_msg_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="You both like:\n Mystery Novels, Art, Cooking"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textSize="60dp" />
+    </LinearLayout>
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/hangup_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
+        android:text="Hang up"
+        android:layout_below="@+id/end_call_btn"
         android:gravity="center"
-        android:textSize="20sp"
-        android:text="home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <ImageButton
+        android:id="@+id/end_call_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="100dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/end_call_icon"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
